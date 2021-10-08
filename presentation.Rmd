@@ -39,7 +39,7 @@ This is a boxplot depiction of the distribution of percentage of parliament posi
   
   
 ```{r}
-pretty_plot(adjust, year, happiness, 2)
+pretty_plot(adjust, year, womenpercent, 2)
 ```
 
   
