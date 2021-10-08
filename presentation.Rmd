@@ -1,0 +1,58 @@
+---
+title: "Assignment 2"
+author: "Kayla Choi"
+date: "10/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, echo=FALSE, message=FALSE}
+source("wrangling_code.R")
+source("visualization_function.R")
+```
+## Data Selection  
+I chose to look at Gapminder's two datasets: average self-reported happiness on a scale of 0-100, and the percentage of parliament members that are women. In this assignment I explored the relationship between happiness over time, the percentage of women in parliament over time, and happiness in relation to the percent of women in power. I chose to do this because I thought it would be interesting to see if the increase in the representation of women, who are historically under-represented in positions of power, would correlate with an increase in the average happiness.  
+
+### Exploration 1
+
+```{r}
+pretty_plot(adjust, year, happiness, 1)
+```
+  
+This is a boxplot depiction of the distribution of happiness scores from the different countries over the years. One thing to note is that the number of observations are not the same from year to year. The next scatterplot depicts this.    
+
+```{r}
+pretty_plot(adjust, year, happiness, 2)
+```
+  
+  
+### Exploration 2
+  
+```{r}
+pretty_plot(adjust, year, womenpercent,1)
+```
+  
+This is a boxplot depiction of the distribution of percentage of parliament positions that are held by women from the different countries over the years. Again, the next scatterplot takes into account the difference in counts per year.  
+  
+  
+```{r}
+pretty_plot(adjust, year, happiness, 2)
+```
+
+  
+### Exploration 3
+  
+
+```{r}
+pretty_plot(adjust, womenpercent, happiness,1)
+```
+  
+  
+This scatterplot shows the relationship between the percentage of parliament positions held by women and the happiness. The color of each point represents the yearly median across the countries. The size of the point represents the number of counts in each median value. The line is a regression line run without 2004, because of its outlier properties (high happiness and extremely low count).   
+    
+    
+## Conclusion  
+I noticed that there does seem to be a relationship between the percent of women in parliament positions and reported happiness. There are other confounding factors, which will need to be explored before we can declare that there is a causal relationship between the two variables.    
