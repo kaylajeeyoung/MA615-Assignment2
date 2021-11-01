@@ -32,7 +32,7 @@ pretty_plot <- function(tib, x, y, num){
                 counts = n())
     
     plot2 <- ggplot(adjustmed, aes(year, hapmed)) +
-      geom_point(aes(size = counts)) + 
+      geom_point(aes(size = counts), color='coral2') + 
       scale_x_discrete(breaks=seq(2004, 2018, 2)) + #don't want every year showing
       ggtitle( "Happiness score over 2004 - 2018") +
       xlab("Year") + 
